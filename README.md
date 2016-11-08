@@ -32,10 +32,10 @@ You should create one R script called run_analysis.R that does the following: <b
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable 
 for each activity and each subject <br />
 
-Steps/ Inputs: <br />
+# Steps/ Inputs: <br />
 1. Change the parameter of the setwd function call to the working directory/folder (i.e., the folder where these the R script file is saved). <br />
 2. Run the R script "run_analysis.R". <br />
 
-Outputs: <br />
+# Outputs: <br />
 1. Master tidy dataset which included traning and test sets. <br />
 2. Independent tidy dataset with the average of each variable for each activity and each subject. <br />
