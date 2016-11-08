@@ -4,7 +4,7 @@ Peer-graded Assignment
 
 Objectives: The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. 
 
-To-dos:
+To do: 
 You will be graded by your peers on a series of yes/no questions related to the project. 
 You will be required to submit: 
 1) a tidy data set as described below
@@ -26,4 +26,10 @@ You should create one R script called run_analysis.R that does the following:
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-# Step 1
+Steps/ Inputs:
+1. Change the parameter of the setwd function call to the working directory/folder (i.e., the folder where these the R script file is saved).
+2. Run the R script "run_analysis.R"
+
+Outputs:
+1. Master tidy dataset which included traning and test sets.
+2. Independent tidy dataset with the average of each variable for each activity and each subject
