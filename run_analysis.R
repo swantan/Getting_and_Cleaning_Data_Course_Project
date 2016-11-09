@@ -79,4 +79,4 @@ with.activity.names <- merge(set.mean.std, actlabels, by = "activityID", all.x =
 secdata <- aggregate(. ~subjectID + activityID + activityType, with.activity.names, mean)
 library(dplyr)
 secdata <- arrange(secdata, activityID)
-write.table(secdata, file = "./Project/data/tidydataset2.csv", sep = ",")
+write.table(secdata, file = "./Project/data/tidydataset2.txt", sep = "\t", row.name = FALSE)
