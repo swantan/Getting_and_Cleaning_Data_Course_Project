@@ -18,29 +18,31 @@
 
 
 ##Download files
+setwd("~/Documents/[Coursera] Data Specialization/3. Getting and Cleaning Data")
+if(!file.exists("./data")){dir.create("./data")}
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", 
-              "./3. Getting and Cleaning Data/Project/HARUSDataset.zip", method = "curl")
+              "./Project/data/HARUSDataset.zip", method = "curl")
 
 #Unzip dataSet to /data directory
-unzip(zipfile="./3. Getting and Cleaning Data/Project/HARUSDataset.zip", 
-      exdir="./3. Getting and Cleaning Data/Project")
+unzip(zipfile="./Project/data/HARUSDataset.zip", 
+      exdir="./Project/data")
 
 ##1. Merges the training and the test sets to create one data set
 #To read testing files
-x.test <- read.table("./3. Getting and Cleaning Data/Project/UCI HAR Dataset/test/X_test.txt")
-y.test <- read.table("./3. Getting and Cleaning Data/Project/UCI HAR Dataset/test/y_test.txt")
-subject.test <- read.table("./3. Getting and Cleaning Data/Project/UCI HAR Dataset/test/subject_test.txt")
+x.test <- read.table("./Project/data/UCI HAR Dataset/test/X_test.txt")
+y.test <- read.table("./Project/data/UCI HAR Dataset/test/y_test.txt")
+subject.test <- read.table("./Project/data/UCI HAR Dataset/test/subject_test.txt")
 
 #To read training files
-x.train <- read.table("./3. Getting and Cleaning Data/Project/UCI HAR Dataset/train/X_train.txt")
-y.train <- read.table("./3. Getting and Cleaning Data/Project/UCI HAR Dataset/train/y_train.txt")
-subject.train <- read.table("./3. Getting and Cleaning Data/Project/UCI HAR Dataset/train/subject_train.txt")
+x.train <- read.table("./Project/data/UCI HAR Dataset/train/X_train.txt")
+y.train <- read.table("./Project/data/UCI HAR Dataset/train/y_train.txt")
+subject.train <- read.table("./Project/data/UCI HAR Dataset/train/subject_train.txt")
 
 #To read features.txt
-features <- read.table("./3. Getting and Cleaning Data/Project/UCI HAR Dataset/features.txt")
+features <- read.table("./Project/data/UCI HAR Dataset/features.txt")
 
 #To read activity_labels.txt
-actlabels <- read.table("./3. Getting and Cleaning Data/Project/UCI HAR Dataset/activity_labels.txt")
+actlabels <- read.table("./Project/data/UCI HAR Dataset/activity_labels.txt")
 
 #4. Appropriately labels the data set with descriptive variable names.
 #To assign column names
@@ -59,6 +61,8 @@ colnames(actlabels) <- c("activityID", "activityType")
 merge.test <- cbind(subject.test, y.test, x.test)
 merge.train <- cbind(subject.train, y.train, x.train)
 merge.all <- rbind(merge.train, merge.test)
+str(merge.all)
+write.table(merge.all, file = "./Project/data/tidydataset1.csv", sep = ",")
 
 
 #2. Extracts only the measurements on the mean and standard deviation for each measurement
@@ -75,3 +79,4 @@ with.activity.names <- merge(set.mean.std, actlabels, by = "activityID", all.x =
 secdata <- aggregate(. ~subjectID + activityID + activityType, with.activity.names, mean)
 library(dplyr)
 secdata <- arrange(secdata, activityID)
+write.table(secdata, file = "./Project/data/tidydataset2.csv", sep = ",")
