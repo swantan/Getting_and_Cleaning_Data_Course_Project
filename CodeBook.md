@@ -31,27 +31,27 @@
 
 >colnames(merge.all) <br \>
 
-\##   [1] "subjectID" <br \>                           
-\##   [2] "activityID" <br \>                          
-\##   [3] "tBodyAcc-mean()-X" <br \>                   
-\##   [4] "tBodyAcc-mean()-Y" <br \>                   
-\##   [5] "tBodyAcc-mean()-Z" <br \>                   
-\##   [6] "tBodyAcc-std()-X" <br \>                    
-\##   [7] "tBodyAcc-std()-Y" <br \>                    
-\##   [8] "tBodyAcc-std()-Z" <br \>                    
-\##   [9] "tBodyAcc-mad()-X" <br \>                    
-\##  [10] "tBodyAcc-mad()-Y" <br \>                    
-\##  [11] "tBodyAcc-mad()-Z" <br \>                    
-\##  [12] "tBodyAcc-max()-X" <br \>                    
-\##  [13] "tBodyAcc-max()-Y" <br \>                    
-\##  [14] "tBodyAcc-max()-Z" <br \>                    
-\##  [15] "tBodyAcc-min()-X" <br \>                    
-\##  [16] "tBodyAcc-min()-Y" <br \>                    
-\##  [17] "tBodyAcc-min()-Z" <br \>                    
-\##  [18] "tBodyAcc-sma()" <br \>                      
-\##  [19] "tBodyAcc-energy()-X" <br \>                 
-\##  [20] "tBodyAcc-energy()-Y" <br \>                 
-\##  [21] "tBodyAcc-energy()-Z" <br \>        
+\##   [1] "subjectID"                           
+\##   [2] "activityID"                         
+\##   [3] "tBodyAcc-mean()-X"                    
+\##   [4] "tBodyAcc-mean()-Y"                    
+\##   [5] "tBodyAcc-mean()-Z"                   
+\##   [6] "tBodyAcc-std()-X"                     
+\##   [7] "tBodyAcc-std()-Y"                     
+\##   [8] "tBodyAcc-std()-Z"                     
+\##   [9] "tBodyAcc-mad()-X"                     
+\##  [10] "tBodyAcc-mad()-Y"                     
+\##  [11] "tBodyAcc-mad()-Z"                     
+\##  [12] "tBodyAcc-max()-X"                     
+\##  [13] "tBodyAcc-max()-Y"                     
+\##  [14] "tBodyAcc-max()-Z"                     
+\##  [15] "tBodyAcc-min()-X"                     
+\##  [16] "tBodyAcc-min()-Y"                     
+\##  [17] "tBodyAcc-min()-Z"                     
+\##  [18] "tBodyAcc-sma()"                       
+\##  [19] "tBodyAcc-energy()-X"                  
+\##  [20] "tBodyAcc-energy()-Y"                  
+\##  [21] "tBodyAcc-energy()-Z"         
 
 ## Overview of the independent second tidy datasets <br \>
 
